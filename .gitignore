@@ -40,3 +40,8 @@ keys.json
 
 # typescript
 .tsbuildinfo
+
+node_modules
+build
+.plasmo
+pnpm-lock.yaml
