@@ -6,10 +6,16 @@ import {
   Center,
   Grid,
   Header,
+  Notification,
   Title
 } from "@mantine/core"
 import * as fcl from "@onflow/fcl"
-import { IconLogout, IconUser } from "@tabler/icons-react"
+import {
+  IconCheck,
+  IconLogout,
+  IconSquareRotatedFilled,
+  IconUser
+} from "@tabler/icons-react"
 import { useEffect, useState } from "react"
 
 import { useStorage } from "@plasmohq/storage/hook"
@@ -19,6 +25,8 @@ import { ThemeProvider } from "~theme"
 fcl.config({
   "accessNode.api": "https://rest-testnet.onflow.org", // Mainnet: "https://rest-mainnet.onflow.org"
   "discovery.wallet": "https://fcl-discovery.onflow.org/testnet/authn", // Mainnet: "https://fcl-discovery.onflow.org/authn"
+  "app.detail.icon": "https://1pixel.red/android-icon-192x192.png",
+  "app.detail.title": "1PIXEL.🟥",
   "0xPixel": "0x60fb6829e09510da"
 })
 
@@ -181,7 +189,7 @@ function IndexPopup() {
             minHeight: 500
           }}>
           <Grid grow w="90%">
-            {NFTs &&
+            {NFTs && NFTs.length ? (
               NFTs.map((nft: any, i: any) => {
                 return (
                   <Grid.Col
@@ -213,7 +221,22 @@ function IndexPopup() {
                     {nft.split(" ")[1]}
                   </Grid.Col>
                 )
-              })}
+              })
+            ) : (
+              <Center>
+                <Grid>
+                  <Grid.Col span={12}>
+                    <Notification
+                      disallowClose
+                      icon={<IconSquareRotatedFilled size={18} />}
+                      color="red"
+                      sx={{ padding: "20px" }}>
+                      Go in search of the red pixel and it will show up here.
+                    </Notification>
+                  </Grid.Col>
+                </Grid>
+              </Center>
+            )}
           </Grid>
         </Center>
       </Box>

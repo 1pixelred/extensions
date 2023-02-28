@@ -1,8 +1,8 @@
 {
   "name": "extensions",
   "displayName": "1PIXEL.RED - where is it?",
-  "version": "0.0.1",
-  "description": "1pixel.red browser extensions.",
+  "version": "0.0.2",
+  "description": "1PIXEL.RED browser extensions.",
   "author": "Alex Baker",
   "scripts": {
     "dev": "plasmo dev",
