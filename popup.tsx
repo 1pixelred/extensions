@@ -1,17 +1,6 @@
-import {
-  BackgroundImage,
-  Badge,
-  Box,
-  Button,
-  Center,
-  Grid,
-  Header,
-  Notification,
-  Title
-} from "@mantine/core"
+import { Badge, Box, Button, Center, Grid, Notification } from "@mantine/core"
 import * as fcl from "@onflow/fcl"
 import {
-  IconCheck,
   IconLogout,
   IconSquareRotatedFilled,
   IconUser
