@@ -1,7 +1,7 @@
 {
   "name": "extensions",
   "displayName": "1PIXEL.RED - where is it?",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "1PIXEL.RED browser extensions.",
   "author": "Alex Baker",
   "scripts": {

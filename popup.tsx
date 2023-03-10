@@ -12,6 +12,7 @@ import { useStorage } from "@plasmohq/storage/hook"
 import { ThemeProvider } from "~theme"
 
 fcl.config({
+  "flow.network": "testnet",
   "accessNode.api": "https://rest-testnet.onflow.org", // Mainnet: "https://rest-mainnet.onflow.org"
   "discovery.wallet": "https://fcl-discovery.onflow.org/testnet/authn", // Mainnet: "https://fcl-discovery.onflow.org/authn"
   "app.detail.icon": "https://1pixel.red/android-icon-192x192.png",
@@ -194,6 +195,8 @@ function IndexPopup() {
                       background: "linear-gradient(to right, #4A00E0, #8E2DE2)",
                       position: "relative",
                       overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
                       opacity: ".95",
                       color: "#fff"
                     }}>
