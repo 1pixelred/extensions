@@ -192,7 +192,7 @@ function IndexPopup() {
                       fontWeight: "bold",
                       fontSize: "35px",
                       borderRadius: "20px",
-                      background: "linear-gradient(to right, #4A00E0, #8E2DE2)",
+                      background: "linear-gradient(to right, #4A00E0, #8E2DE1)",
                       position: "relative",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
